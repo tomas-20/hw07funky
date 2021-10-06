@@ -13,6 +13,11 @@ float average(int array[], int size) {
   }
   return (float) sum / size;
 }
+void copy(int a[], int b[], int size) {
+  for (int i = 0; i < size; i ++) {
+    b[i] = a[i];
+  }
+}
 int main() {
   int bob[5];
   bob[0] = 2;
@@ -22,5 +27,8 @@ int main() {
   bob[4] = 9;
   print_array(bob, 5);
   printf("the average of bob is %f\n", average(bob, 5));
+  int joe[5];
+  copy(bob, joe, 5);
+  print_array(joe, 5);
   return 0;
 }
